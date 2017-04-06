@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<title>成績判斷</title>
+		<script type="text/javascript">
+			function dd(){
+				var num = document.getElementById('num').value*1;
+				if(num >= 60)
+					document.getElementById('ans').innerHTML='及格';
+				else
+					document.getElementById('ans').innerHTML='不及格';
+			}
+		</script>
+	</head>
+	<body>
+		<h1>成績判斷</h1>
+		<input type="number" id="num">
+		<input type="button" onclick="dd()" value="判斷">
+		<div id="ans">
+
+		</div>
+	</body>
+</html>

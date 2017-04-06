@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<title>計算機</title>
+		<script type="text/javascript">
+			function answer(){
+				var num1 = document.getElementById('num1').value*1;
+				var num2 = document.getElementById('num2').value*1;
+				var cc = document.getElementById('cc').value;
+				switch(cc){
+					case "+":
+						document.getElementById('ans').innerHTML = num1+num2;
+					break;
+					case "-":
+						document.getElementById('ans').innerHTML = num1-num2;
+					break;	
+					case "*":
+						document.getElementById('ans').innerHTML = num1*num2;
+					break;
+					case "/":
+						document.getElementById('ans').innerHTML = num1/num2;
+					break;
+				}
+			}
+			function cl(){
+				document.getElementById('ans').innerHTML="";
+			}
+		</script>
+	</head>
+	<body>
+		<h1>簡易計算機</h1>
+		<form>
+			num1<br>
+			<input type="number" name="" id="num1" />
+			<br>
+			計算符號(+-*/)<br>
+			<input type="text" name="" id="cc">
+			<br>
+			num2<br>
+			<input type="number" name="" id="num2"><br>
+			<button type="reset" onclick="cl()">清空</button>
+			<button type="button" onclick="answer()">計算</button>
+			<div id="ans"></div>
+		</form>
+	</body>
+</html>
